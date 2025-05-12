@@ -1,0 +1,29 @@
+# .NET build folders
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/[Pp]ackages/*
+
+# User-specific files
+*.rsuser
+*.userosscache

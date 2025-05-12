@@ -15,11 +15,20 @@ namespace NameNationalityClassifier.Tests
     }
 
     [Theory]
-    [InlineData("Wang", "china")]
-    [InlineData("Petrov", "russia")]
-    [InlineData("Smith", "rest")]
-    [InlineData("Zhang", "china")]
-    [InlineData("Ivanov", "russia")]
+    [InlineData("Наталья Гор", "russia")]
+    [InlineData("Султан Иванов", "russia")]
+    [InlineData("Мухаммад Алибеков", "russia")]
+    [InlineData("Арсен Расулов", "russia")]
+    [InlineData("Махач Ибнугаджаров", "russia")]
+    [InlineData("彦媛", "china")]
+    [InlineData("Wang Xiaoming", "china")]
+    [InlineData("王小明", "china")]
+    [InlineData("Butt Lahori", "rest")]
+    [InlineData("Tonin Kapaj", "rest")]
+    [InlineData("Jordi Blasco", "rest")]
+    [InlineData("Sangie Ma", "rest")]
+    [InlineData("John Smith", "rest")]
+    [InlineData("Иван Иванов", "russia")]
     public void PredictNationality_ShouldReturnExpectedNationality(string name, string expectedNationality)
     {
       // Act
@@ -33,7 +42,7 @@ namespace NameNationalityClassifier.Tests
     public void GetPredictionProbabilities_ShouldReturnValidProbabilities()
     {
       // Act
-      Dictionary<string, double> probabilities = _classifier.GetPredictionProbabilities("Wang");
+      Dictionary<string, double> probabilities = _classifier.GetPredictionProbabilities("Wang Xiaoming");
 
       // Assert
       Assert.Equal(3, probabilities.Count);
