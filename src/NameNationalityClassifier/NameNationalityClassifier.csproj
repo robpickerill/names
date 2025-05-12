@@ -10,6 +10,6 @@
     <RepositoryUrl>https://github.com/robpickerill/name-nationality-classifier</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Text.Json" Version="6.0.0" />
+    <PackageReference Include="System.Text.Json" Version="6.0.10" />
   </ItemGroup>
 </Project>
