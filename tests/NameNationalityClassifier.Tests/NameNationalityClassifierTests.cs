@@ -20,6 +20,7 @@ namespace NameNationalityClassifier.Tests
     [InlineData("Мухаммад Алибеков", "russia")]
     [InlineData("Арсен Расулов", "russia")]
     [InlineData("Махач Ибнугаджаров", "russia")]
+    [InlineData("Иван Иванов", "russia")]
     [InlineData("彦媛", "china")]
     [InlineData("Wang Xiaoming", "china")]
     [InlineData("王小明", "china")]
@@ -28,7 +29,6 @@ namespace NameNationalityClassifier.Tests
     [InlineData("Jordi Blasco", "rest")]
     [InlineData("Sangie Ma", "rest")]
     [InlineData("John Smith", "rest")]
-    [InlineData("Иван Иванов", "russia")]
     public void PredictNationality_ShouldReturnExpectedNationality(string name, string expectedNationality)
     {
       // Act
@@ -59,7 +59,7 @@ namespace NameNationalityClassifier.Tests
       }
       Assert.InRange(sum, 0.99, 1.01);
 
-      // China should have the highest probability for Wang
+      // China should have the highest probability for Wang Xiaoming
       Assert.True(probabilities["china"] > probabilities["russia"]);
       Assert.True(probabilities["china"] > probabilities["rest"]);
     }
